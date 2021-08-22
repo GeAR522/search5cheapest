@@ -14,6 +14,8 @@ soup = bs(page, features='lxml') # the base website we are searching on being ma
 strongPage = soup.body.findAll('strong') #searching the bold items as th eprices are bold
 function_Page = re.findall('£\d.\d+', str(strongPage)) #within thebold, searching for a price using regex
 
+# DomSamphier: keep up the good work Alex
+
 
 linkPage = soup.body.findAll('a')  #searching base page for all tags with 'a'
 hrefPage = re.findall('property/.....', str(linkPage))  # finding the property tag, which is also link ending
